@@ -75,6 +75,7 @@ function Auth({ signup }) {
         if(result.status===200){
             //store data
             sessionStorage.setItem("existingUser",JSON.stringify(result.data.existingUser))
+            sessionStorage.setItem("username",JSON.stringify(result.data.existingUser.username))
             sessionStorage.setItem("token",result.data.token)
 
             toast.success(`login Successfull`)

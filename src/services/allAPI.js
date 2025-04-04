@@ -22,6 +22,6 @@ export const submitAPI  = async(reqBody,reqHeader)=>{
 //update password
 
 export const updatepassAPI =async(users)=>{
-   return await commonAPI('POST',`${BASE_URL}/updatepassword`,users,"")
+   return await commonAPI('PUT',`${BASE_URL}/user/updatepassword`,users,"")
 
 }
