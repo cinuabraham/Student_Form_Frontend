@@ -5,6 +5,8 @@ import Modal from 'react-bootstrap/Modal';
 import { submitAPI } from '../services/allAPI';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReCAPTCHA from 'react-google-recaptcha';
+//6LecyxMrAAAAAGWrjKoagaJ3OByfc_E_ml5h7eA1
 
 
 function Forms() {
@@ -21,8 +23,7 @@ function Forms() {
 
     })
 
-  
-
+  const [capVal, setCapVal] = useState(null)
     const [show, setShow] = useState(false);
 //state to hold token
 const [token, setToken] = useState("")
@@ -159,13 +160,14 @@ useEffect(()=>{
                                     <textarea name="" id="comment" placeholder='Comments' className='form-control' value={formlogin.comment} onChange={(e)=>setFormlogin({...formlogin,comment:e.target.value})}></textarea>
                                 </div>
                             </div>
+                           <div className='form-group was-validated mb-3 w-100'> <ReCAPTCHA sitekey="6LecyxMrAAAAAGWrjKoagaJ3OByfc_E_ml5h7eA1" onChange={(val)=>setCapVal(val)}/></div>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="primary" onClick={handleClose1} >
                             Reset 
                         </Button>
-                        <Button variant="success" onClick={handleSubmit}>
+                        <Button disabled={!capVal} variant="success" onClick={handleSubmit}>
                             Submit
                         </Button>
                         
