@@ -140,7 +140,7 @@ useEffect(()=>{
                                 <div>
                                     <label className='p-2' htmlFor="country" >Blood Group</label>
                                     <select className="w-full p-2 border rounded mb-2" onChange={(e)=>setFormlogin({...formlogin,Bloodgroup:e.target.value})} >
-                                    <option value="Null" selected></option>
+                                    <option value="Choose one" selected>Choose one</option>
                                         <option value="o+">O<sup>+</sup></option>
                                         <option value="o-">O<sup>-</sup></option>
                                         <option value="AB+">AB<sup>+</sup></option>
