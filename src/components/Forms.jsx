@@ -160,8 +160,7 @@ useEffect(()=>{
                                     <textarea name="" id="comment" placeholder='Comments' className='form-control' value={formlogin.comment} onChange={(e)=>setFormlogin({...formlogin,comment:e.target.value})}></textarea>
                                 </div>
                             </div>
-                           <div className='form-group was-validated mb-3 w-100'> <ReCAPTCHA sitekey="6LecyxMrAAAAAGWrjKoagaJ3OByfc_E_ml5h7eA1" onChange={(val)=>setCapVal(val)}/></div>
-                        </div>
+                           
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="primary" onClick={handleClose1} >
