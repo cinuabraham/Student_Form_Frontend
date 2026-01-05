@@ -166,7 +166,7 @@ useEffect(()=>{
                         <Button variant="primary" onClick={handleClose1} >
                             Reset 
                         </Button>
-                        <Button disabled={!capVal} variant="success" onClick={handleSubmit}>
+                        <Button variant="success" onClick={handleSubmit}>
                             Submit
                         </Button>
                         
